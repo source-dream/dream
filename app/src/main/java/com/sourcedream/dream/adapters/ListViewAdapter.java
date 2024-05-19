@@ -1,7 +1,6 @@
 package com.sourcedream.dream.adapters;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,7 +18,7 @@ import java.util.List;
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerHolder> {
     private final List<ItemFocusBean> focusData;
     private final List<ItemTaskBean> taskData;
-    private int dataType;
+    private final int dataType;
     // 构造方法
     public ListViewAdapter(int dataType, List<?> data) {
         this.dataType = dataType;
@@ -50,10 +49,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerH
     @Override
     public void onBindViewHolder(@NonNull ListViewAdapter.InnerHolder holder, int position) {
         if(dataType == 0) {
-            ItemFocusBean itemFocusBean = focusData.get(position);
+            ItemFocusBean itemFocusBean = focusData.get(position); // 获取当前位置的数据
             holder.setData(itemFocusBean);
         } else {
-            ItemTaskBean itemTaskBean = taskData.get(position);
+            ItemTaskBean itemTaskBean = taskData.get(position); // 获取当前位置的数据
             holder.setData(itemTaskBean);
         }
     }
