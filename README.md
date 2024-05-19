@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/source-dream/dream"><img width="140" style="boeder-radius: 10px;" src="https://raw.githubusercontent.com/source-dream/dream/main/app/src/main/res/mipmap-xxxhdpi/icon.png" alt="dream logo"></a></p>
+<p align="center"><a href="https://github.com/source-dream/dream"><img width="140" style="boeder-radius: 10px;" src="https://raw.githubusercontent.com/source-dream/dream/main/app/src/main/res/mipmap-xxxhdpi/icon.webp" alt="dream logo"></a></p>
 
 <h1 align="center">
   Dream
@@ -55,7 +55,7 @@
 
 点击此处或者在发布页面下载安装即可开始使用
 
-## 📗目前开发规划
+## 📗目前开发进度
 
 - [ ] 登录
 
@@ -66,6 +66,8 @@
 
 
 ## 技术栈
+
+>开发工具: Android Studio
 
 + XML
 + Java
@@ -91,6 +93,6 @@
 如果您喜欢我们软件，非常感谢您的支持!
 
 <div>
-    <img src="https://cdn.sourcedream.cn/image/wx.png"/ style="width=50%;">
-    <img src="https://cdn.sourcedream.cn/image/zfb.png"/ style="width=50%;">
+    <img src="https://cdn.sourcedream.cn/image/wx.png" style="width=50%;">
+    <img src="https://cdn.sourcedream.cn/image/zfb.png" style="width=50%;">
 </div>
