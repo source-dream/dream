@@ -1,9 +1,17 @@
 package com.sourcedream.dream.database;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.sourcedream.dream.beans.ItemFocusBean;
+import com.sourcedream.dream.beans.ItemTaskBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "FocusDatabase.db";
@@ -31,23 +39,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createFocusTable = "CREATE TABLE " + FOCUS_TABLE_NAME + "("
-                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + COLUMN_FOCUS_TIME + " LONG,"
-                + COLUMN_FOCUS_DATE + " TEXT,"
-                + COLUMN_TASK_ID + " INTEGER, "
+                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," // 专注id
+                + COLUMN_FOCUS_TIME + " LONG," // 专注时间
+                + COLUMN_FOCUS_DATE + " TEXT," //  专注完成日期
+                + COLUMN_TASK_ID + " INTEGER, " // 专注任务id
                 + "FOREIGN KEY(" + COLUMN_TASK_ID + ") REFERENCES " + TASK_TABLE_NAME + "(" + TASK_COLUMN_TASK_ID + ")" // 外键约束
                 + ")";
         db.execSQL(createFocusTable);
         String createTaskTable = "CREATE TABLE " + TASK_TABLE_NAME + "("
-                + TASK_COLUMN_TASK_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + TASK_COLUMN_TASK_NAME + " TEXT,"
-                + TASK_COLUMN_TASK_STATUS + " INTEGER,"
-                + TASK_COLUMN_TASK_FOCUS_TIME + " LONG,"
-                + TASK_COLUMN_TASK_DATE + " TEXT,"
-                + TASK_COLUMN_TASK_DEADLINE + " TEXT,"
-                + TASK_COLUMN_TASK_LEVEL + " INTEGER"
+                + TASK_COLUMN_TASK_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," // 任务id
+                + TASK_COLUMN_TASK_NAME + " TEXT," // 任务名称
+                + TASK_COLUMN_TASK_STATUS + " INTEGER," // 任务状态
+                + TASK_COLUMN_TASK_FOCUS_TIME + " LONG," // 任务专注时间
+                + TASK_COLUMN_TASK_DATE + " TEXT," //  任务创建日期
+                + TASK_COLUMN_TASK_DEADLINE + " TEXT," // 任务截至日期
+                + TASK_COLUMN_TASK_LEVEL + " INTEGER" // 任务重要性
                 + ")";
         db.execSQL(createTaskTable);
+        insertInitData(db); // 插入初始化数据
     }
 
     // 添加任务数据
@@ -98,5 +107,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+    // 获取任务数据
+    @SuppressLint("Range")
+    public List<ItemTaskBean> getTaskData() {
+        // 创建任务数据对象
+        List<ItemTaskBean> taskList = new ArrayList<>();
+        // 获取数据库
+        try (SQLiteDatabase db = getReadableDatabase();
+             // 创建游标
+             Cursor cursor = db.query(TASK_TABLE_NAME, null, null, null, null, null, null)) {
+            // 遍历游标
+            if (cursor.moveToFirst()) {
+                do {
+                    int id = cursor.getInt(cursor.getColumnIndex(TASK_COLUMN_TASK_ID));
+                    String name = cursor.getString(cursor.getColumnIndex(TASK_COLUMN_TASK_NAME));
+                    int status = cursor.getInt(cursor.getColumnIndex(TASK_COLUMN_TASK_STATUS));
+                    int level = cursor.getInt(cursor.getColumnIndex(TASK_COLUMN_TASK_LEVEL));
+                    String deadline = cursor.getString(cursor.getColumnIndex(TASK_COLUMN_TASK_DEADLINE));
+                    int focusTime = cursor.getInt(cursor.getColumnIndex(TASK_COLUMN_TASK_FOCUS_TIME));
+                    taskList.add(new ItemTaskBean(id, name, status, level, deadline, focusTime));
+                } while (cursor.moveToNext());
+            }
+        }
+        return taskList;
+    }
+    // 获取专注数据
+    @SuppressLint("Range")
+    public List<ItemFocusBean> getFocusData() {
+        List<ItemFocusBean> focusList = new ArrayList<>();
+        try (SQLiteDatabase db = getReadableDatabase();
+             Cursor cursor = db.query(FOCUS_TABLE_NAME, null, null, null, null, null, null)) {
+            if (cursor.moveToFirst()) {
+                do {
+                    long focusTime = cursor.getLong(cursor.getColumnIndex(COLUMN_FOCUS_TIME));
+                    String focusDate = cursor.getString(cursor.getColumnIndex(COLUMN_FOCUS_DATE));
+                    int taskId = cursor.getInt(cursor.getColumnIndex(COLUMN_TASK_ID));
+                    String taskName = "任务名字";
+                    focusList.add(new ItemFocusBean(focusTime, focusDate, taskId, taskName));
+                } while (cursor.moveToNext());
+            }
+        }
+        return focusList;
     }
 }

@@ -1,13 +1,13 @@
 
 
-java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(†·Ûq8¨ØÒ†ö1J$39b191ea-f66f-4c8a-ae48-e150d2029a51
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(†·Ûq8ÆšÒ‹ù1J$d589910d-e2ce-462b-9889-83d2465faf89
 “
-java:S1104"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8¨ØÒ†ö1J$f8b74dac-e845-4847-98bf-7e33ac77237b
+java:S1104"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8ÆšÒ‹ù1J$58beede9-41fd-4b93-9917-47a2b7f3381b
 š
-java:S1104"RMake status a static final constant or non-public and provide accessors if needed.(ƒóšÜüÿÿÿÿ8¨ØÒ†ö1J$8cfe34ea-c661-4614-bca0-024ccfb192f3
+java:S1104"RMake status a static final constant or non-public and provide accessors if needed.(ƒóšÜüÿÿÿÿ8ÆšÒ‹ù1J$217b61a1-cdab-4fe3-949e-94a07ecc533a
 ”
-java:S1104"QMake level a static final constant or non-public and provide accessors if needed.(×îæ8ï…ø‡ö1J$2a656131-52f3-4d22-b511-2a29d094722d
+java:S1104"QMake level a static final constant or non-public and provide accessors if needed.(×îæ8ÆšÒ‹ù1J$44c16f2e-1806-4961-b3a2-a5cd12ad11e9
 —
-java:S1104"TMake deadline a static final constant or non-public and provide accessors if needed.(ó«ã€8óúö‡ö1J$6fdefb7d-d427-4a97-8992-09e3b4cf1b39
+java:S1104"TMake deadline a static final constant or non-public and provide accessors if needed.(ó«ã€8ÆšÒ‹ù1J$dea10136-3ecd-4e9b-ac73-8393eea0958d
 ˜
-java:S1104	"UMake focusTime a static final constant or non-public and provide accessors if needed.(Û¦©É8÷˜Ó†ö1J$303593ce-e9d6-45b6-9c16-eee3a316e9ca
+java:S1104	"UMake focusTime a static final constant or non-public and provide accessors if needed.(Û¦©É8ÆšÒ‹ù1J$73479514-44d3-4b81-9e5c-fb6325ce4dff

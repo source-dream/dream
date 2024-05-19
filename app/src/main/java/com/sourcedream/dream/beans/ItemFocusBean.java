@@ -5,5 +5,11 @@ public class ItemFocusBean {
     public String focusDate;
     public  int taskId;
     public String taskName;
-
+    // 构造函数
+    public ItemFocusBean(long focusTime, String focusDate, int taskId, String taskName) {
+        this.focusTime = focusTime;
+        this.focusDate = focusDate;
+        this.taskId = taskId;
+        this.taskName = taskName;
+    }
 }

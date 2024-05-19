@@ -1,7 +1,5 @@
 
 ¦
-java:S1450"cRemove the "bottomNavigationView" field and declare it as a local variable in the relevant methods.(ê¥ÎÚ8·ÃŠö1J$0f66ba41-6697-4642-ab86-8f6419a9bd86
-~	java:S125d"<This block of commented-out lines of code should be removed.(ï¯Õã8¨ˆÖö1J$8aa38639-15e2-4a38-b28a-838d72a14d25
-~	java:S125j"<This block of commented-out lines of code should be removed.(ºİ¾å8¬¨Öö1J$825409ec-3d4c-44aa-83f3-394f26ca298f
-p
-java:S1602†",Remove useless curly braces around statement(š¼‹©8ÌÃŠö1J$2b25a8b2-6770-4143-a234-472cd5e3ba24
+java:S1450"cRemove the "bottomNavigationView" field and declare it as a local variable in the relevant methods.(ê¥ÎÚ8·ÃŠö1J$5c69ff2d-4d82-4eea-bb41-17fd7c8cd542
+o
+java:S1602}",Remove useless curly braces around statement(š¼‹©8ÌÃŠö1J$702843be-dd9f-4592-9481-9eb85a445073

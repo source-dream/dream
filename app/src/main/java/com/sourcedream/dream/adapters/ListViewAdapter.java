@@ -104,7 +104,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerH
         }
         @SuppressLint("SetTextI18n")
         public void setData(ItemTaskBean itemTaskBean) {
-            Log.d("YMDEBUG", "mainActivity debug");
             if(itemTaskBean.status == 0) {
                 icon.setImageResource(R.drawable.checkbox_false);
             } else {
@@ -113,7 +112,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerH
             title.setText(itemTaskBean.name);
             deadline.setText(itemTaskBean.deadline);
             level.setText(itemTaskBean.level+"");
-            Log.d("YMDEBUG", "mainActivity debug");
         }
     }
 }

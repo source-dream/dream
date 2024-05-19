@@ -15,6 +15,7 @@ import android.widget.Button;
 
 import com.sourcedream.dream.adapters.ListViewAdapter;
 import com.sourcedream.dream.beans.ItemFocusBean;
+import com.sourcedream.dream.database.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,19 +45,24 @@ public class FocusFragment extends Fragment {
         }
     }
     private  void  updateFocusData() {
-        Log.d("YMDEBUG", "mainActivity updateFocusData");
-        // List<DataBea>---->Adapter---->setAdapter---->显示数据
         // 创建数据对象
         List<ItemFocusBean> focusData = new ArrayList<>();
+
+        // 获取数据
+        DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
+        focusData = databaseHelper.getFocusData();
         // 创建数据对象
-        for(int i=0; i<20;i++) {
-            ItemFocusBean data = new ItemFocusBean();
-            data.focusDate  = "专注日期";
-            data.focusTime = 0;
-            data.taskId = 0;
-            data.taskName = "任务名称";
-            focusData.add(data);
-        }
+
+        // 模拟数据
+//        for(int i=0; i<20;i++) {
+//            ItemFocusBean data = new ItemFocusBean();
+//            data.focusDate  = "专注日期";
+//            data.focusTime = 0;
+//            data.taskId = 0;
+//            data.taskName = "任务名称";
+//            focusData.add(data);
+//        }
+
         // 设置样式(布局管理器)
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         focusList.setLayoutManager(layoutManager);

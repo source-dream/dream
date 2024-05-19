@@ -1,11 +1,9 @@
 package com.sourcedream.dream;
-
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,9 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.sourcedream.dream.database.DatabaseHelper;
 
@@ -26,10 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private  ListFragment listFragment;
     private MyFragment myFragment;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("YMDEBUG", "MainActivity OnCreate ");
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -97,14 +91,11 @@ public class MainActivity extends AppCompatActivity {
     @Override // 重写 onResume 方法
     protected void onResume() {
         super.onResume();
-//        Log.d("YMDEBUG", "MainActivity OnResume ");
         // 获取 SharedPreferences 实例
         SharedPreferences sharedPreferences = getSharedPreferences("FocusData", MODE_PRIVATE);
         long focusTime = sharedPreferences.getLong("focusTime", 0);
         String focusDate = sharedPreferences.getString("focusDate", "");
         int taskId = sharedPreferences.getInt("focusTaskId", -1);
-//        Log.d("YMDEBUG", "taskId: " + taskId + " focusTime: " + focusTime + " focusDate: " + focusDate);
-
         if (taskId != -1) {
             // 显示对话框
             AlertDialog dialog = getAlertDialog(taskId, focusTime, sharedPreferences);

@@ -23,10 +23,8 @@ public class Focus extends AppCompatActivity {
         // 设置全屏 防止锁屏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_focus);
-
         // 找控件
         chronometer = findViewById(R.id.chronometer);
-
         // 开始计时
         chronometer.setBase(SystemClock.elapsedRealtime());
         chronometer.setFormat("%H:%M:%S");
