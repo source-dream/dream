@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/source-dream/dream"><img width="200" src="https://github.com/source-dream/dream/app/src/main/res/mipmap-xxxhdpi/icon.png" alt="dream logo"></a></p>
+<p align="center"><a href="https://github.com/source-dream/dream"><img width="140" style="boeder-radius: 10px;" src="https://raw.githubusercontent.com/source-dream/dream/main/app/src/main/res/mipmap-xxxhdpi/icon.png" alt="dream logo"></a></p>
 
 <h1 align="center">
   Dream
