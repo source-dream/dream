@@ -1,8 +1,8 @@
 
-i
-java:S20954"LUse try-with-resources or close this "DatabaseHelper" in a "finally" clause.(äÎµš8Ã Œù1
+
+java:S20953"LUse try-with-resources or close this "DatabaseHelper" in a "finally" clause.(äÎµš8Ã Œù1J$6d39bf4b-c753-4570-baaf-c713df66431c
 €
-java:S18541"=Remove this useless assignment to local variable "focusData".(ßÕ8¿‘å‹ù1J$a68ad6b9-c1b4-4266-9f20-125774ce088f
-ƒ	java:S1259"<This block of commented-out lines of code should be removed.(’é×ôúÿÿÿÿ8€æã‹ù1J$e99c1525-2ba8-4abc-b0ef-57768c8e3579
+java:S18541"=Remove this useless assignment to local variable "focusData".(ßÕ8¿‘å‹ù1J$142f575c-c811-4aee-b321-13dcad68283f
+ƒ	java:S1257"<This block of commented-out lines of code should be removed.(’é×ôúÿÿÿÿ8€æã‹ù1J$3883de59-5db0-4ff4-a84e-82086213802b
 v
-java:S1068"3Remove this unused "focusListLength" private field.(¿˜™á8š·Àö1J$015266a8-fdc0-45b8-8b52-317c03781a03
+java:S1068"3Remove this unused "focusListLength" private field.(¿˜™á8š·Àö1J$ea22b200-30db-43da-9feb-d8b680c9bcf5

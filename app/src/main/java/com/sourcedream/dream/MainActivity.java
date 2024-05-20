@@ -19,7 +19,7 @@ import com.sourcedream.dream.database.DatabaseHelper;
 public class MainActivity extends AppCompatActivity {
     private  BottomNavigationView bottomNavigationView;
     private  FocusFragment focusFragment;
-    private  ListFragment listFragment;
+    private TaskFragment taskFragment;
     private MyFragment myFragment;
 
     @Override
@@ -60,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.show(focusFragment);
             }
         } else if(position==1) {
-            if(listFragment==null){
-                listFragment = new ListFragment();
-                fragmentTransaction.add(R.id.content, listFragment);
+            if(taskFragment ==null){
+                taskFragment = new TaskFragment();
+                fragmentTransaction.add(R.id.content, taskFragment);
             } else {
-                fragmentTransaction.show(listFragment);
+                fragmentTransaction.show(taskFragment);
             }
         } else if(position==2) {
             if(myFragment ==null){
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
         if(myFragment !=null){
             fragmentTransaction.hide(myFragment);
         }
-        if(listFragment!=null){
-            fragmentTransaction.hide(listFragment);
+        if(taskFragment !=null){
+            fragmentTransaction.hide(taskFragment);
         }
         if(focusFragment!=null) {
             fragmentTransaction.hide(focusFragment);

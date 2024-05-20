@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EAE8E8"
-    tools:context=".ListFragment">
+    tools:context=".TaskFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/task_list"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_add_item"
+        android:id="@+id/btn_add_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"

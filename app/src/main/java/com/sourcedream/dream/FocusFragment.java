@@ -26,8 +26,8 @@ public class FocusFragment extends Fragment {
     private int focusListLength = 0;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // 加载布局
         View view = inflater.inflate(R.layout.fragment_focus, container, false);
         Button btnStartFocus = view.findViewById(R.id.btn_start_focus);
         btnStartFocus.setOnClickListener(new ClickBtn());
@@ -47,12 +47,10 @@ public class FocusFragment extends Fragment {
     private  void  updateFocusData() {
         // 创建数据对象
         List<ItemFocusBean> focusData = new ArrayList<>();
-
         // 获取数据
         DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
         focusData = databaseHelper.getFocusData();
         // 创建数据对象
-
         // 模拟数据
 //        for(int i=0; i<20;i++) {
 //            ItemFocusBean data = new ItemFocusBean();
@@ -62,7 +60,6 @@ public class FocusFragment extends Fragment {
 //            data.taskName = "任务名称";
 //            focusData.add(data);
 //        }
-
         // 设置样式(布局管理器)
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         focusList.setLayoutManager(layoutManager);
