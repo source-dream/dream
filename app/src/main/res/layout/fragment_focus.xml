@@ -7,24 +7,51 @@
     android:background="#EAE8E8"
     tools:context=".FocusFragment">
 
-    <LinearLayout
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"
         android:background="@drawable/settings_bg"
-        android:orientation="vertical"
+        android:rowCount="4"
+        android:columnCount="1"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="点击此处设置目标"
+            android:text="点击设置长远目标"
             android:textColor="#000000"
-            android:textSize="30dp" />
-    </LinearLayout>
+            android:textSize="30dp"
+            android:layout_rowWeight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="目标倒计时"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_rowWeight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="你还没有添加任务"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_rowWeight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="任务倒计时"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_rowWeight="1"/>
+
+    </GridLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/focus_list"
