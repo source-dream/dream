@@ -1,6 +1,0 @@
-
-
-java:S2095!"LUse try-with-resources or close this "DatabaseHelper" in a "finally" clause.(äÎµš8ü–Œù1J$16212325-b4bf-4432-a1a5-e5914a840c51
-„
-java:S1854"<Remove this useless assignment to local variable "taskData".(¦À ×ûÿÿÿÿ8—¢ƒŒù1J$eb352895-74fc-4b90-8d92-88b24d2139ec
-ƒ	java:S125$"<This block of commented-out lines of code should be removed.(ê…š™üÿÿÿÿ8…–Œù1J$3cb8093d-2996-4b06-858e-202460b0ce87

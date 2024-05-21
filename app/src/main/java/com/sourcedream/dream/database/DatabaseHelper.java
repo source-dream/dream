@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "FocusDatabase.db";
+    public static final String DATABASE_NAME = "Database.db";
     public static final int DATABASE_VERSION = 1;
 
     public static final String FOCUS_TABLE_NAME = "focus"; // 专注记录表
@@ -91,11 +91,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // 插入初始化数据
     public void insertInitData(SQLiteDatabase db) {
         // 添加任务数据
-        int taskId1 = addTask(db, "任务1", "2021-01-01", "2021-01-10", 1);
-        int taskId2 = addTask(db, "任务2", "2021-01-02", "2021-01-11", 2);
-        int taskId3 = addTask(db, "任务3", "2021-01-03", "2021-01-12", 3);
-        int taskId4 = addTask(db, "任务4", "2021-01-04", "2021-01-13", 4);
-        int taskId5 = addTask(db, "任务5", "2021-01-05", "2021-01-14", 5);
+        addTask(db, "任务1", "2021-01-01", "2021-01-10", 1);
+        addTask(db, "任务2", "2021-01-02", "2021-01-11", 2);
+        addTask(db, "任务3", "2021-01-03", "2021-01-12", 3);
+        addTask(db, "任务4", "2021-01-04", "2021-01-13", 4);
+        addTask(db, "任务5", "2021-01-05", "2021-01-14", 5);
 
         // 添加专注数据
         addFocus(db, 1000 * 60 * 25, "2021-01-01", 1);

@@ -5,8 +5,6 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 j
 :app/src/main/java/com/sourcedream/dream/FocusFragment.java,0\3\03011e71283ea3227cbba252dbb22294754844e5
-i
-9app/src/main/java/com/sourcedream/dream/ListFragment.java,d\d\ddd2b99fac275a4cb3b94c0e9a8fa93c3dd54af2
 D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
 @

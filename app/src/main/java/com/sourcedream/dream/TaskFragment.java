@@ -1,14 +1,17 @@
 package com.sourcedream.dream;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.sourcedream.dream.adapters.ListViewAdapter;
 import com.sourcedream.dream.beans.ItemTaskBean;
 import com.sourcedream.dream.database.DatabaseHelper;
@@ -17,7 +20,6 @@ import java.util.List;
 
 public class TaskFragment extends Fragment {
     private RecyclerView taskList;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_task, container, false);
@@ -25,16 +27,16 @@ public class TaskFragment extends Fragment {
         // 数据获取
         updateTaskData();
         Button btnAddTask = view.findViewById(R.id.btn_add_task);
-        btnAddTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddTaskDialogFragment dialogFragment = new AddTaskDialogFragment();
-                dialogFragment.show(getParentFragmentManager(), "AddTaskDialogFragment");
-            }
+        btnAddTask.setOnClickListener(v -> {
+            // 创建任务添加碎片
+            AddTaskDialogFragment addTaskDialogFragment = new AddTaskDialogFragment();
+            // 显示碎片
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            addTaskDialogFragment.show(fragmentTransaction, "addTaskDialogFragment");
         });
         return view;
     }
-
     private void updateTaskData() {
         // 创建数据对象
         List<ItemTaskBean> taskData = new ArrayList<>();

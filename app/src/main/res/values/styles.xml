@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--底部弹框动画-->
+    <style name="bottomDialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_fr_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_fr_out</item>
+    </style>
+</resources>

@@ -112,12 +112,11 @@ public class MainActivity extends AppCompatActivity {
                 values.put(DatabaseHelper.COLUMN_TASK_ID, taskId); // 使用正确的列名
                 db.insert(DatabaseHelper.FOCUS_TABLE_NAME, null, values); // 使用正确的表名
             } catch (Exception e) {
-                Log.e("YMDEBUG", "Database operation failed", e);
+                Log.e("DEBUGINFO", "Database operation failed", e);
             }
 
         }
     }
-
     @NonNull
     private AlertDialog getAlertDialog(int taskId, long focusTime, SharedPreferences sharedPreferences) {
         AlertDialog.Builder builder = getBuilder(taskId, focusTime, sharedPreferences);

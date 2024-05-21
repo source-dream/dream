@@ -1,35 +1,15 @@
 
 Š
-java:S1192,"GDefine a constant instead of duplicating this literal " TEXT," 4 times.(ßÉŞÜ8ı»€Œù1J$390470c9-ce80-4d8d-98f1-c412433d5f54
+java:S1192,"GDefine a constant instead of duplicating this literal " TEXT," 4 times.(ßÉŞÜ8ı»€Œù1J$5a96b5d1-5f69-4ad5-bae2-47e6033a725d
 
-java:S2184e"FCast one of the operands of this multiplication operation to a "long".(‰–³Ğùÿÿÿÿ8„¼€Œù1J$3375b394-8dc6-440c-a8e7-b9eda2639052
+java:S2184e"FCast one of the operands of this multiplication operation to a "long".(‰–³Ğùÿÿÿÿ8„¼€Œù1J$2c0db64a-5a5a-4f9a-845a-e8060d5d1a89
 
-java:S2184f"FCast one of the operands of this multiplication operation to a "long".(§€ßüÿÿÿÿ8„¼€Œù1J$e7aaa264-c687-4f5f-990e-89906f24b5d1
+java:S2184f"FCast one of the operands of this multiplication operation to a "long".(§€ßüÿÿÿÿ8„¼€Œù1J$264c07ad-796e-4e55-8750-34e6096f2aad
 ‰
-java:S2184g"FCast one of the operands of this multiplication operation to a "long".(Æ—°®8„¼€Œù1J$cfb82721-3148-42e7-b58a-689146fc560a
+java:S2184g"FCast one of the operands of this multiplication operation to a "long".(Æ—°®8„¼€Œù1J$50a7397a-9ba9-4376-a5ff-3c9b9717db23
 ‰
-java:S2184h"FCast one of the operands of this multiplication operation to a "long".(´ò•§8„¼€Œù1J$32efc9a3-2959-44b2-a1bd-5ed729128394
+java:S2184h"FCast one of the operands of this multiplication operation to a "long".(´ò•§8„¼€Œù1J$c966635b-b674-4c2a-adc2-74d85e7b4252
 ‰
-java:S2184i"FCast one of the operands of this multiplication operation to a "long".(œ³Â8„¼€Œù1J$a3958923-93da-4b7d-8392-6a1828cfceed
+java:S2184i"FCast one of the operands of this multiplication operation to a "long".(œ³Â8„¼€Œù1J$94101e7e-21c7-4694-9dd9-5c0a3dab88d3
 É
-java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄÜ»ûÿÿÿÿ8“¼€Œù1J$1d19ed6c-c5f7-441b-ab2c-d531badb5200
-~
-java:S1854b";Remove this useless assignment to local variable "taskId5".(Ø§ÔÓ8œ¼€Œù1J$b0be0fbb-bb66-4963-a666-2ce89ca295d0
-ƒ
-java:S1854a";Remove this useless assignment to local variable "taskId4".(ş±¿øÿÿÿÿ8œ¼€Œù1J$506378f8-31e5-4b1f-b126-45244f501204
-~
-java:S1854`";Remove this useless assignment to local variable "taskId3".(±ä«¶8œ¼€Œù1J$0f765958-105c-4728-9283-638b6823c5a2
-}
-java:S1854_";Remove this useless assignment to local variable "taskId2".(–«‘8œ¼€Œù1J$e3581c43-15e1-495a-b7c8-d249e34b9c7c
-ƒ
-java:S1854^";Remove this useless assignment to local variable "taskId1".(¨å’ãùÿÿÿÿ8œ¼€Œù1J$069637ee-a991-4d46-98b1-8142d641fde5
-t
-java:S1481^",Remove this unused "taskId1" local variable.(¨å’ãùÿÿÿÿ8¼€Œù1J$5377310e-dbb7-490e-b799-a96e497e678e
-n
-java:S1481_",Remove this unused "taskId2" local variable.(–«‘8¼€Œù1J$841789aa-b0b1-4011-bfb5-37084f4bb6ff
-o
-java:S1481`",Remove this unused "taskId3" local variable.(±ä«¶8¼€Œù1J$9c298de5-e46c-4fdb-aa35-e63745a11bb4
-t
-java:S1481a",Remove this unused "taskId4" local variable.(ş±¿øÿÿÿÿ8¼€Œù1J$8309e30a-8ac4-45e0-896a-e7ddddae68db
-o
-java:S1481b",Remove this unused "taskId5" local variable.(Ø§ÔÓ8¼€Œù1J$57384d80-16c1-4808-a303-a54569e6db2e
+java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄÜ»ûÿÿÿÿ8“¼€Œù1J$a114e99c-de96-4918-af49-9a3225ceb8c6
