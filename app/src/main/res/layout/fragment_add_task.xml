@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
     android:background="@drawable/settings_bg">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+
         <EditText
             android:id="@+id/task_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="任务名称" />
-    </LinearLayout>
+            android:hint="任务名称"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="text" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/set_time"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Set Time"
+                android:padding="8dp"
+                android:src="@drawable/ic_time"
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:id="@+id/set_imp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Set Time"
+                android:padding="8dp"
+                android:src="@drawable/ic_imp"
+                android:layout_toRightOf="@id/set_time"/>
+
+            <ImageView
+                android:id="@+id/add_task"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Add Task"
+                android:padding="8dp"
+                android:src="@drawable/ic_come"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
