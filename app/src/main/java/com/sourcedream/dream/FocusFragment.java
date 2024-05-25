@@ -23,7 +23,6 @@ import java.util.List;
 
 public class FocusFragment extends Fragment {
     private RecyclerView focusList;
-    private int focusListLength = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

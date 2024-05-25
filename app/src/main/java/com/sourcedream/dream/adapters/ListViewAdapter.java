@@ -37,6 +37,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerH
             this.taskData = null;
         } else if (dataType == 1) {
             this.taskData = (List<ItemTaskBean>) data;
+            // 按照deadline排序
+            this.taskData.sort((o1, o2) -> {
+                if(o1.deadline.compareTo(o2.deadline) > 0) {
+                    return 1;
+                } else if(o1.deadline.compareTo(o2.deadline) < 0) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
             this.focusData = null;
         } else {
             this.taskData = null;
