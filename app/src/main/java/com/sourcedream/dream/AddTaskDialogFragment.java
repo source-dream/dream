@@ -19,7 +19,6 @@ public class AddTaskDialogFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_add_task, container, false);
-
         return view;
     }
     @Override

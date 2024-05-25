@@ -99,9 +99,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // 添加专注数据
         addFocus(db, 1000 * 60 * 25, "2021-01-01", 1);
-        addFocus(db, 1000 * 60 * 25, "2021-01-02", 1);
-        addFocus(db, 1000 * 60 * 25, "2021-01-03", 1);
-        addFocus(db, 1000 * 60 * 25, "2021-01-04", 1);
+        addFocus(db, 4000 * 60 * 25, "2021-01-02", 1);
+        addFocus(db, 200 * 60 * 25, "2021-01-03", 1);
+        addFocus(db, 800 * 60 * 25, "2021-01-04", 1);
         addFocus(db, 1000 * 60 * 25, "2021-01-05", 1);
     }
     @Override

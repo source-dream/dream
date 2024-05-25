@@ -24,6 +24,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.InnerH
         this.dataType = dataType;
         if (dataType == 0) {
             this.focusData = (List<ItemFocusBean>) data;
+            // 按照focusDate排序
+            this.focusData.sort((o1, o2) -> {
+                if(o1.focusDate.compareTo(o2.focusDate) > 0) {
+                    return -1;
+                } else if(o1.focusDate.compareTo(o2.focusDate) < 0) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
             this.taskData = null;
         } else if (dataType == 1) {
             this.taskData = (List<ItemTaskBean>) data;

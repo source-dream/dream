@@ -46,20 +46,10 @@ public class FocusFragment extends Fragment {
     }
     private  void  updateFocusData() {
         // 创建数据对象
-        List<ItemFocusBean> focusData = new ArrayList<>();
+        List<ItemFocusBean> focusData;
         // 获取数据
         DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
         focusData = databaseHelper.getFocusData();
-        // 创建数据对象
-        // 模拟数据
-//        for(int i=0; i<20;i++) {
-//            ItemFocusBean data = new ItemFocusBean();
-//            data.focusDate  = "专注日期";
-//            data.focusTime = 0;
-//            data.taskId = 0;
-//            data.taskName = "任务名称";
-//            focusData.add(data);
-//        }
         // 设置样式(布局管理器)
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         focusList.setLayoutManager(layoutManager);
